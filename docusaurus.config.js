@@ -30,6 +30,7 @@ const config = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
+          routeBasePath: "/",
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
@@ -44,7 +45,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "博客首页",
+        title: "ZXK的博客网站",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
@@ -56,10 +57,10 @@ const config = {
           //   position: "left",
           //   label: "Tutorial",
           // },
-          { to: "/blog", label: "博客", position: "right" },
+
           {
             href: "https://github.com/dsxksss",
-            label: "GitHub",
+            label: "我的GitHub主页",
             position: "right",
           },
         ],
