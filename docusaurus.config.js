@@ -45,6 +45,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
+        hideOnScroll: true,
         title: "ZXK的博客网站",
         logo: {
           alt: "My Site Logo",
