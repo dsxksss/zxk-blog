@@ -1,0 +1,12 @@
+# 存放发帖人信息的一个集合,yml配置格式得注意缩进
+endi:
+  name: Endilie Yacop Sucipto
+  title: Maintainer of Docusaurus
+  url: https://github.com/endiliey
+  image_url: https://github.com/endiliey.png
+
+ZXK:
+  name: zhang xiao kang
+  title: School Students
+  url: https://github.com/dsxksss
+  image_url: https://avatars.githubusercontent.com/u/73477803?v=4
