@@ -46,7 +46,7 @@ const config = {
     ({
       navbar: {
         hideOnScroll: true,
-        title: "ZXK的博客网站🐱",
+        title: "🐱ZXK的博客网站🐱",
         items: [
           // {
           //   type: "doc",
