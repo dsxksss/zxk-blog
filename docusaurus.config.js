@@ -46,11 +46,7 @@ const config = {
     ({
       navbar: {
         hideOnScroll: true,
-        title: "ZXK的博客网站",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
-        },
+        title: "ZXK的博客网站🐱",
         items: [
           // {
           //   type: "doc",
