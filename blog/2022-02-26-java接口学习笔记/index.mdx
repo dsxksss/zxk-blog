@@ -1,0 +1,91 @@
+---
+slug: Java接口
+title: ☕Java接口笔记
+authors: [ZXK]
+tags: [Java, 学习笔记, 接口]
+---
+
+<!-- truncate -->
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Pill from "@site/src/components/Pill";
+
+## `JAVA` 语言里的 `interface` 是什么样一个的东西 ?
+
+:::info java 代码
+
+### <Pill text="white" bg="#29d5b0">**interface**</Pill>是一种类似于 class 的类型,他并没有自己的实现方法,它只定义了这个类里应该具有的一些功能声明
+
+```js
+
+public interface 构建图形{
+    //只有功能声明,并没有具体的代码细节
+    void 画出一个圆形();
+}
+
+```
+
+:::
+
+## interface 在 **`Java`** 中起到了什么作用 ?
+
+:::tip **作用解答**
+
+### 1、主要就是让类之间的<Pill textW="700" brd="3px">耦合</Pill>依赖降低,从而加固类的扩展性和稳定性.
+
+### 2、其原理是在两个类之间放置一个接口来分离题目,所以我们只需要调用其接口方法就可以使用各自的方法
+
+:::
+
+## 利用 interface[接口]来解决类之间的耦合
+
+:::info **现有两个高耦合的 JAVA 类**
+
+## 如图所示,在此`java`程序中有<Pill textW="900" brd="5px"> A、B </Pill>两类.
+
+<Tabs>
+  <TabItem value="a" label="类A" default>
+
+```js
+public class A{
+    private int couter;
+
+    public void A(int couter){
+        this.couter=couter;
+    }
+
+    public int getCouter(){
+        return this.couter+1;
+    }
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="类B">
+
+```js
+public class A{
+    private A obj;
+
+    public void createA(){
+        obj=new A(45);
+    }
+
+    public int showCouter(){
+        var tax= A.getCouter();
+        System.out.println(tax);
+    }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## 其中类 B 依赖类 A 中的功能,假设我们现在要给类 A 的构造函数再增加一个参数.
+
+## 那么类 B 里的代码就必须要修改,先如今此项目还很小,但是如果后期代码达到了几千行以上,那么这对程序的维护是非常不利的
+
+:::
+
+<a href="#top">回到顶部</a>

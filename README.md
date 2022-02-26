@@ -1,41 +1,20 @@
-# Website
+---
+slug: welcome
+title: 🎉欢迎来到我的博客🎉
+authors: [ZXK]
+tags: [第一篇博客, 你好~]
+---
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+<!-- truncate -->
 
-### Installation
+## 1、第一次编写博客有关的内容实在不知道说啥好 👽
 
-```
-$ yarn
-```
+那我就来介绍一下这个博客网站吧，此博客网站是利用 **`docusaurus`** V2 框架搭建的，**`vercel`** 云服务自动部署的。
 
-### Local Development
+说实话 **`vercel`** 很不错，因为不用去自己去购置云服务器，也不需要进行繁琐的配置操作，10 分钟左右就可以上线一个属于自己的网站。
 
-```
-$ yarn start
-```
+## 2、👀 关于为啥要建这么一个网站...
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+其实自己并没有写技术博客的习惯，但是看见很多大佬都会记录自己的技术成长过程，这个网站后续会分享一些编程技术、生活、等博客文章，然后反正这个网站服务器也是白嫖 **`vercel`** 的，自己也不用花钱，而且一键部署这么省心，很难不用哈哈哈哈哈哈哈哈哈哈哈
 
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+本来吧也就是打算玩玩 vercel 这个东西，结果玩着玩着就有了写博客的念头。刚好今天也更新了一下 ventroar 网站项目的介绍博客

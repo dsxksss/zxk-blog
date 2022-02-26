@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
@@ -7,7 +7,6 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "ZXK的个人技术博客",
-  tagline: "此博客是利用docusaurusV2框架搭建",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -29,6 +28,8 @@ const config = {
         // },
         blog: {
           showReadingTime: true,
+          postsPerPage: 10, //一页最多允许多少篇博客
+          blogSidebarCount: 5, //侧边栏显示个数
           // Please change this to your repo.
           routeBasePath: "/",
           editUrl:
@@ -40,7 +41,6 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -54,7 +54,10 @@ const config = {
           //   position: "left",
           //   label: "Tutorial",
           // },
-
+          {
+            type: "localeDropdown",
+            position: "right",
+          },
           {
             href: "https://github.com/dsxksss",
             label: "我的GitHub主页",
@@ -62,6 +65,13 @@ const config = {
           },
         ],
       },
+      // announcementBar: {
+      //   id: "support_us",
+      //   content: "此博客是利用docusaurusV2框架搭建",
+      //   backgroundColor: "#29d5b0",
+      //   textColor: "white",
+      //   isCloseable: true,
+      // },
       footer: {
         copyright: `Copyright © ${new Date().getFullYear()} ZXKBLOG`,
       },
