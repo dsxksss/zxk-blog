@@ -1,0 +1,101 @@
+---
+slug: rust入门篇01
+title: ⚙️rust入门篇01-Rust的变量与类型学习笔记
+authors: [ZXK]
+tags: [Rust, 学习笔记, 变量]
+---
+
+import Pill from "@site/src/components/Pill";
+
+<!-- truncate -->
+
+## <Pill brd="6px">**本篇的 Rust 笔记代码**</Pill>
+
+```cpp
+    let a = 12;
+    let mut b = 0; //这里的as表示强制转换成了i32类型的变量
+    println!("b原来的值{}", b);
+    b = 30 as i64;
+    let c: bool = true;
+    const CONST_VAR: u32 = 500_000;
+    println!(
+        "a={}\tb={}\t使用隐藏特性前的c={}\tCONST_VAR={}\t",
+        a, b, c, CONST_VAR
+    );
+
+    let c: u32 = 50;
+    println!("使用隐藏特性后的c={}", c);
+    println!("你好");
+```
+
+## RUST 基本类型
+
+### <Pill brd="5px" textW="900" brd="3px">标准类型介绍</Pill>
+
+#### 1、<Pill brd="5px" text="white" bg="#29d5b0">**int**</Pill>(i8,i16,i32<Pill text="black" textW="600">默认</Pill>,i64,i128):整数类型,包括负数,
+
+#### 2、<Pill brd="5px" text="white" bg="#29d5b0">**+int**</Pill>(u8,u16,u32<Pill text="black" textW="600">默认</Pill>,u64,u128):正整数类型,因为不包含负数,所以可以包含更多正整数
+
+#### 3、<Pill brd="5px" text="white" bg="#29d5b0">**float**</Pill>(f32<Pill text="black" textW="600">默认</Pill>,f64):浮点类型,数字越大精度越高,因此小数点位数也要多
+
+#### 4、<Pill brd="5px" text="white" bg="#29d5b0">**bool**</Pill>(true,false):布尔类型
+
+:::tip 小知识
+
+#### 有时候可以看见带下划线的数字,那么做的意义是可以快速方便查看此数字的位数
+
+:::
+
+## <Pill brd="6px">**Rust 变量**</Pill>的基础创建语法
+
+:::info 变量创建语法
+
+#### <Pill textW="800">let (mut 可选) <变量名>:<变量类型 可忽略,因为会自动推导> = <变量值></Pill>
+
+:::
+
+### 变量的特性:
+
+:::danger 重要
+
+- 1、必须使用 mut 关键字表示此变量内容可被改变
+- 2、在 rust 语言里，每个变量内容默认都是不可变的
+- 3、就算加了 mut 关键字也不能改变它的根类型只允许改变相同类型的值
+- 4、创建的同时可以省略类型标注
+- 5、可以使用 as 关键字表示强制转换
+
+:::
+
+## <Pill brd="6px">**Rust 常量**</Pill>的基础创建语法
+
+:::info 常量创建语法语法
+
+#### <Pill textW="800">const <变量名>:<变量类型 不可忽略> = <常量值></Pill>
+
+:::
+
+### 常量的特性和变量的不同点:
+
+:::danger 重要
+
+- 1、不可以使用 mut,常量永远都是不可变的
+- 2、声明常量使用 const 关键字,它的类型必须被标注
+- 3、常量可以在任何作用域内进行声明,包括全局作用域
+- 4、常量只可以绑定到常量表达式,无法绑定到函数的调用结果或只能在运行是才能计算出的值
+- 5、在程序运行期间,常量在其声明的作用域内一直有效
+- 6、命名规范是:全使用大写字母,每个单词之间用下划线分开
+
+:::
+
+## Rust 变量特性
+
+### 1、Shadowing(隐藏)
+
+:::caution 可了解
+
+- 可以使用相同的名字声明新的变量,新的变量就会 shadow(隐藏)之前声明过的同名变量,在后续代码中使用的将会使用新创建的变量
+- shadow 和把变量标记为 mut 的变量是不一样的,shadow 可以赋予其他类型,仅使用 mut 的变量则不行;
+- 如果不适用 let 关键字,那么重新给非 mut 的变量赋值会导致编译错误
+- 使用 let 声明的同名新变量也是不可变的,但是创建时可以赋值新的类型
+
+:::
